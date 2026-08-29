@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="js-widget-title" content="YouGlish">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+            background: white;
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+<a id="yg-widget-0"
+   class="youglish-widget"
+   data-query=""
+   data-lang="english"
+   data-components="8415"
+   data-bkg-color="theme_light"
+   rel="nofollow"
+   href="https://youglish.com">
+    Visit YouGlish.com
+</a>
+
+<script>
+    // Get the search term from ?q=
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q") || "great power";
+
+    // Tell YouGlish what to search for
+    document.getElementById("yg-widget-0")
+        .setAttribute("data-query", query);
+
+    // Give the YouGlish script some time to initialize.
+    function __wweb2WaitMillisecondsToWidgetIsReady(currentDelayMs) {
+        return 5000;
+    }
+</script>
+
+<script async
+        src="https://youglish.com/public/emb/widget.js"
+        charset="utf-8">
+</script>
+
+</body>
+</html>
